@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @mainmenu.content.html_safe %>
+</p>
+
+<p>
+  <strong>display?</strong>
+  <%= @mainmenu.dis_flg %>
+</p>
+
+<%= link_to 'Edit', edit_mainmenu_path(@mainmenu) %> |
+<%= link_to 'Back', mainmenus_path %>

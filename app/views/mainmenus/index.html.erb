@@ -1,0 +1,23 @@
+<table width="500px">
+  <thead>
+    <tr>
+      <th>Content</th>
+      <th>avatar</th>
+      <th>dis_flg</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @mainmenus.each do |mainmenu| %>
+      <tr>
+        <td><%= mainmenu.content.html_safe %></td>
+        <td><%= mainb menu.avatar %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Mainmenu', new_mainmenu_path %>
