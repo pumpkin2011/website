@@ -15,3 +15,15 @@
 //= require kindeditor
 //= require turbolinks
 //= require_tree .
+//= require jquery-ui/datepicker
+//= jquery.media
+
+$(function() {
+
+	//datepicker
+  	$('.datepicker').datepicker();
+
+
+  	// for pdf
+  	$('.media').media();
+});

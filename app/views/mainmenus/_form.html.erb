@@ -17,7 +17,7 @@
   </div>
 
   <div class="field">
-    Avatar(<p> please use /<p/>to seprate content<\/p\> </p>)
+    Avatar
     <br>
     <%= image_tag(@mainmenu.avatar_url, style: "width: 150px; height: 150px") if @mainmenu.avatar? %>
     <br>
@@ -27,12 +27,11 @@
 
   <div class="field">
     <%= f.label :dis_flg %><br>
-    <%= f.text_field :dis_flg %>
+    <%= f.text_field :dis_flg, class: "datepicker" %>
   </div>
 
   <div class="actions">
     <%= f.submit %>
   </div>
-
 
 <% end %>

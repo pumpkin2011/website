@@ -2,7 +2,7 @@
 <div>
   <% if @mainmenu then %>
     <div>
-      <%= image_tag(@mainmenu.avatar_url, style: "width: 868px; height: 300px") if @mainmenu.avatar? %>
+      <%= image_tag(@mainmenu.avatar_url, style: "width: 868px; height: 300px", class: "img-rounded") if @mainmenu.avatar? %>
     </div>
 
     <div style="margin-top: 20px">

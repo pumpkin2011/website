@@ -1,0 +1,21 @@
+<table class="table">
+  <tbody>
+    <% @papers.each do |paper| %>
+      <tr>
+        <td>
+            <b>&bull;
+              <a href="#" style="color: black"><%= paper.title %></a>
+            </b>
+            <div style="margin-left: 8px">
+              <p>
+                <%= paper.description %>
+                [<a href="#">read more</a>]
+              </p>
+            </div>
+        </td>
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+

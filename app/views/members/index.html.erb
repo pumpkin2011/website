@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+<table class="table" align="center" width="80%">
+  <% @members.each do |member| %>
+    <tr>
+      <td width="25%">
+          <%= image_tag(member.avatar_url, style: "width: 150px; height: 200px", class: "img-rounded") if member.avatar? %>
+      </td>
+
+      <td>
+          <b><%= member.name %></b> <br />
+          <%= member.role %> <br />
+      </td>
+    </tr>
+  <% end %>
+</table>

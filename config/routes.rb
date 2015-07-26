@@ -1,5 +1,19 @@
 Rails.application.routes.draw do
 
+
+  resources :console_desks
+
+  get :papers_all, :controller=>:papers, :action=>:papers
+  resources :papers
+  # devise_for :members
+
+
+  devise_for :members, controllers: {
+    sessions: 'members/sessions'
+  }
+
+  resources :members
+
   get :mainpage, :controller=>:mainmenus, :action=>:mainpage
 
   resources :mainmenus do

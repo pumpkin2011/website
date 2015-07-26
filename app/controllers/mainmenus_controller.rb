@@ -1,14 +1,15 @@
 class MainmenusController < ApplicationController
-  before_action :set_mainmenu, only: [:show, :edit, :update, :destroy]
+  before_action :set_mainmenu,         only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_member!, only: [:index, :show, :edit, :update, :destroy]
 
   def mainpage
-    @mainmenu = Mainmenu.all.first
+    @mainmenu = Mainmenu.dis_flg_1.first
   end
 
   # GET /mainmenus
   # GET /mainmenus.json
   def index
-    @mainmenus = Mainmenu.unscoped.all
+    @mainmenus = Mainmenu.all
   end
 
   # GET /mainmenus/1

@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @paper.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @paper.description %>
+</p>
+
+<p>
+  <strong>Def flg:</strong>
+  <%= @paper.def_flg %>
+</p>
+<br>
+123
+<br>
+<%= image_tag(@paper.avatar_url, style: "width: 150px; height: 150px") if @paper.avatar? %>
+
+<a href=<%= @paper.avatar_url %> class="media" >123</a>
+
+<%= link_to 'Edit', edit_paper_path(@paper) %> |
+<%= link_to 'Back', papers_path %>

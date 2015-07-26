@@ -1,4 +1,4 @@
-<table width="500px">
+<table class="table table-hover">
   <thead>
     <tr>
       <th>Content</th>
@@ -12,7 +12,13 @@
     <% @mainmenus.each do |mainmenu| %>
       <tr>
         <td><%= mainmenu.content.html_safe %></td>
-        <td><%= mainb menu.avatar %></td>
+        <td><%= image_tag(mainmenu.avatar_url, style: "width: 140px; height: 140px", class: "img-rounded") if mainmenu.avatar? %><td>
+        <td><%= mainmenu.avatar %></td>
+        <td><%= mainmenu.dis_flg %></td>
+
+        <td><%= link_to 'Show', mainmenu %></td>
+        <td><%= link_to 'Edit', edit_mainmenu_path(mainmenu) %></td>
+        <td><%= link_to 'Destroy', mainmenu, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

@@ -12,4 +12,13 @@
  *
  *= require_tree .
  *= require_self
+ *= require jquery-ui/datepicker
  */
+ .con_layout{
+ 	margin-left: 35%;
+ 	margin-top: 100px;
+ }
+
+ .reg_con_layout{
+ 	margin-left: 35%;
+ }
