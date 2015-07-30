@@ -34,6 +34,7 @@ gem 'rails_kindeditor'
 #upload
 gem 'carrierwave'
 gem 'devise'
+gem 'cancancan'
 
 
 # Use ActiveModel has_secure_password

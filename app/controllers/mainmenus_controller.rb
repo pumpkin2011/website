@@ -1,6 +1,7 @@
 class MainmenusController < ApplicationController
   before_action :set_mainmenu,         only: [:show, :edit, :update, :destroy]
   before_action :authenticate_member!, only: [:index, :show, :edit, :update, :destroy]
+  # load_and_authorize_resource
 
   def mainpage
     @mainmenu = Mainmenu.dis_flg_1.first
@@ -9,6 +10,7 @@ class MainmenusController < ApplicationController
   # GET /mainmenus
   # GET /mainmenus.json
   def index
+    puts current_member
     @mainmenus = Mainmenu.all
   end
 

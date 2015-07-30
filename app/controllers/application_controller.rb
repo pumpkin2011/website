@@ -12,6 +12,16 @@ class ApplicationController < ActionController::Base
 	# puts session[:controller]
   }
 
+  def current_ability
+    @current_ability ||= Ability.new(current_member)
+  end 
+
+
+  # cancancan exception
+  rescue_from CanCan::AccessDenied do |exception|
+    redirect_to root_url, :notice => exception.message
+  end
+
   protected
 
   # def configure_permitted_parameters
