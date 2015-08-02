@@ -12,6 +12,11 @@ class MainmenusController < ApplicationController
   def index
     puts current_member
     @mainmenus = Mainmenu.all
+
+    respond_to do |format|
+      format.html { render :layout => "console_desks" }
+    end
+    
   end
 
   # GET /mainmenus/1
