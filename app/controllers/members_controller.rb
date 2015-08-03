@@ -1,6 +1,5 @@
 class MembersController < ApplicationController
   before_action :set_member, only: [:show, :edit, :update, :destroy]
-  
 
   # GET /members
   # GET /members.json
@@ -8,18 +7,35 @@ class MembersController < ApplicationController
     @members = Member.all
   end
 
+  # show all members on comsole desk
+  def show_all
+    @members = Member.unscoped.all
+
+    respond_to do |format|
+      format.html { render "members", layout: "console_desks" }
+    end
+
+  end
+
   # GET /members/1
   # GET /members/1.json
   def show
+    respond_to do |format|
+      format.html { render :layout => "console_desks" }
+    end
   end
 
   # GET /members/new
-  # def new
-  #   @member = Member.new
-  # end
+  def new
+    @member = Member.new
+  end
 
   # GET /members/1/edit
   def edit
+
+    respond_to do |format|
+      format.html { render :layout => "console_desks" }
+    end
   end
 
   # POST /members
@@ -41,7 +57,6 @@ class MembersController < ApplicationController
   # PATCH/PUT /members/1
   # PATCH/PUT /members/1.json
   def update
-    puts 111111111111111
     # puts member_params
     # member_params.avatar = member_params[:file]
 

@@ -9,13 +9,20 @@ class PapersController < ApplicationController
   end
 
   # GET /papers_all
-  def papers
+  def show_all
     @papers = Paper.all
+
+    respond_to do |format|
+      format.html { render :papers, :layout => "console_desks" }
+    end
   end
 
   # GET /papers/1
   # GET /papers/1.json
   def show
+    respond_to do |format|
+      format.html { render :layout => "console_desks" }
+    end
   end
 
   # GET /papers/new

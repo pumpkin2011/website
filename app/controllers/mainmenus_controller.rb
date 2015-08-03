@@ -1,6 +1,7 @@
 class MainmenusController < ApplicationController
   before_action :set_mainmenu,         only: [:show, :edit, :update, :destroy]
   before_action :authenticate_member!, only: [:index, :show, :edit, :update, :destroy]
+  protect_from_forgery :except => :destroy 
   # load_and_authorize_resource
 
   def mainpage
@@ -27,10 +28,18 @@ class MainmenusController < ApplicationController
   # GET /mainmenus/new
   def new
     @mainmenu = Mainmenu.new
+
+    respond_to do |format|
+      format.html { render :layout => "console_desks" }
+    end
   end
 
   # GET /mainmenus/1/edit
   def edit
+
+    respond_to do |format|
+      format.html { render :layout => "console_desks" }
+    end
   end
 
   # POST /mainmenus

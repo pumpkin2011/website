@@ -5,4 +5,7 @@ class Member < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   mount_uploader :avatar, AvatarUploader
+
+  default_scope { where(:del_flg => 0) }
+
 end

@@ -1,5 +1,6 @@
 class Members::SessionsController < Devise::SessionsController
 # before_filter :configure_sign_in_params, only: [:create]
+protect_from_forgery :except => :destroy
 
   # GET /resource/sign_in
   # def new
@@ -12,9 +13,9 @@ class Members::SessionsController < Devise::SessionsController
   # end
 
   # DELETE /resource/sign_out
-  # def destroy
-  #   super
-  # end
+  def destroy
+    super
+  end
 
   # protected
 

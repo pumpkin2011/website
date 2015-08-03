@@ -4,7 +4,11 @@ Rails.application.routes.draw do
   resources :console_desks
 
   get :papers_all, :controller=>:papers, :action=>:papers
-  resources :papers
+  resources :papers do
+    collection do
+      get :show_all
+    end
+  end
   # devise_for :members
 
 
@@ -12,7 +16,11 @@ Rails.application.routes.draw do
     sessions: 'members/sessions'
   }
 
-  resources :members
+  resources :members do
+    collection do 
+      get :show_all
+    end
+  end
 
   get :mainpage, :controller=>:mainmenus, :action=>:mainpage
 
