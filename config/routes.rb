@@ -13,12 +13,14 @@ Rails.application.routes.draw do
 
 
   devise_for :members, controllers: {
-    sessions: 'members/sessions'
+    :registrations => "members",
+    :sessions      => 'members/sessions'
   }
 
   resources :members do
     collection do 
-      get :show_all
+      get  :show_all
+      post :create_member
     end
   end
 

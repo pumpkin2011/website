@@ -1,6 +1,6 @@
 class PapersController < ApplicationController
   before_action :set_paper, only: [:show, :edit, :update, :destroy]
-  load_and_authorize_resource only: [:exit, :update, :destroy, :new]
+  # load_and_authorize_resource only: [:exit, :update, :destroy, :new]
 
   # GET /papers
   # GET /papers.json
@@ -32,6 +32,9 @@ class PapersController < ApplicationController
 
   # GET /papers/1/edit
   def edit
+    respond_to do |format|
+      format.html {render :layout => "console_desks" }
+    end
   end
 
   # POST /papers

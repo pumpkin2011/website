@@ -9,7 +9,7 @@ class Members::RegistrationsController < Devise::RegistrationsController
 
   # POST /resource
   def create
-    super
+    puts 111111111111111111111111111
   end
 
   # GET /resource/edit
