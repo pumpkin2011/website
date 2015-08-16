@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
 
+  resources :m_roles
   resources :console_desks
 
   get :papers_all, :controller=>:papers, :action=>:papers

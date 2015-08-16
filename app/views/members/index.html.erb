@@ -1,10 +1,11 @@
 <p id="notice"><%= notice %></p>
 <table align="center" width="90%">
-  <% @members.each do |member| %>
+  <% @members.each_with_index do |member, index| %>
     <% if cycle('even', 'odd') == "even" %>
+
       <tr>
         <td width="50%">
-          <div style="float: left; display: inline">
+          <div style="float: left; display: inline; margin-top: 20px">
             <%= image_tag(member.avatar_url, style: "width: 150px; height: 200px", class: "img-rounded") if member.avatar? %>
           </div>
 
@@ -15,10 +16,14 @@
           </div>
         </td>
 
+        <% if index == @members.length-1 %>
+          </tr>
+        <% end %>
+
     <% else %>
 
         <td>
-          <div style="float: left; display: inline">
+          <div style="float: left; display: inline; margin-top: 20px">
             <%= image_tag(member.avatar_url, style: "width: 150px; height: 200px", class: "img-rounded") if member.avatar? %>
           </div>
 
@@ -29,6 +34,7 @@
           </div>
         </td>
       </tr>
+
     <% end %>
   <% end %>
 </table>

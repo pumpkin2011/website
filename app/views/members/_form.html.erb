@@ -53,7 +53,8 @@
 
   <div class="field">
     <%= f.label :role %><br>
-    <%= f.text_field :role %>
+    <%= f.select :role, MRole.all.collect{ |mr| [mr.role, mr.role_no] }, { include_blank: true }, { class: "form-control" } %>
+    <%#= f.text_field :role %>
   </div>
 
   <div class="field">
