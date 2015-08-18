@@ -6,7 +6,7 @@
       <th></th>
       <th>content</th>
       <th>dis_flg</th>
-      <th colspan="3"></th>
+      <th></th>
     </tr>
   </thead>
 
@@ -17,10 +17,17 @@
         <td><%= mainmenu.content.html_safe %></td>
 <!--         <td><%= mainmenu.avatar %></td> -->
         <td><%= mainmenu.dis_flg %></td>
+        <td>
+          <div class="btn-group" role="group" aria-label="...">
+            <nobr>
+              <%= link_to 'Show', mainmenu, class: "btn btn-default" %>
+              <%= link_to 'Edit', edit_mainmenu_path(mainmenu), class: "btn btn-default" %>
+              <%= link_to 'Destroy', mainmenu, class: "btn btn-default", method: :delete, data: { confirm: 'Are you sure?' } %>
+            </nobr>
+          </div>
+        </td>
 
-        <td><%= link_to 'Show', mainmenu %></td>
-        <td><%= link_to 'Edit', edit_mainmenu_path(mainmenu) %></td>
-        <td><%= link_to 'Destroy', mainmenu, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        
       </tr>
     <% end %>
   </tbody>

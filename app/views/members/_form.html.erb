@@ -11,70 +11,78 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :email %><br>
-    <%= f.email_field :email, autofocus: true %>
-  </div>
   
 
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
+  <div class="panel panel-default">
+  <div class="panel-heading">Panel heading without title</div>
+  <div class="panel-body">
+    
+    <div class="field">
+      <%= f.label :email %><br>
+      <%= f.email_field :email, autofocus: true, class: "text_style" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :password %>
+      <% if @minimum_password_length %>
+      <em>(<%= @minimum_password_length %> characters minimum)</em>
+      <% end %><br />
+      <%= f.password_field :password, autocomplete: "off" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :password_confirmation %><br />
+      <%= f.password_field :password_confirmation, autocomplete: "off" %>
+    </div>
+
+
+    <div class="field">
+      <%= f.label :name %><br>
+      <%= f.text_field :name %>
+    </div>
+
+    <div class="field">
+      <%= f.label :birthday %><br>
+      <%= f.text_field :birthday, class: "datepicker" %>123
+    </div>
+
+    <div class="field">
+      <%= f.label :date_in %><br>
+      <%= f.text_field :date_in %>
+    </div>
+
+    <div class="field">
+      <%= f.label :graduated_from %><br>
+      <%= f.text_field :graduated_from %>
+    </div>
+
+    <div class="field">
+      <%= f.label :role %><br>
+      <%= f.select :role, MRole.all.collect{ |mr| [mr.role, mr.role_no] }, { include_blank: true }, { class: "form-control" } %>
+      <%#= f.text_field :role %>
+    </div>
+
+    <div class="field">
+      <%= f.label :status %><br>
+      <%= f.text_field :status %>
+    </div>
+
+    <div class="field">
+      <%= f.label :del_flg %><br>
+      <%= f.text_field :del_flg %>
+    </div>
+
+    <div class="field">
+      headPic<br>
+      <%= f.file_field :avatar %>
+      <%= f.hidden_field :avatar_cache %>
+    </div>
+
+
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+
   </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
-
-
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-
-  <div class="field">
-    <%= f.label :birthday %><br>
-    <%= f.text_field :birthday, class: "datepicker" %>123
-  </div>
-
-  <div class="field">
-    <%= f.label :date_in %><br>
-    <%= f.text_field :date_in %>
-  </div>
-
-  <div class="field">
-    <%= f.label :graduated_from %><br>
-    <%= f.text_field :graduated_from %>
-  </div>
-
-  <div class="field">
-    <%= f.label :role %><br>
-    <%= f.select :role, MRole.all.collect{ |mr| [mr.role, mr.role_no] }, { include_blank: true }, { class: "form-control" } %>
-    <%#= f.text_field :role %>
-  </div>
-
-  <div class="field">
-    <%= f.label :status %><br>
-    <%= f.text_field :status %>
-  </div>
-
-  <div class="field">
-    <%= f.label :del_flg %><br>
-    <%= f.text_field :del_flg %>
-  </div>
-
-  <div class="field">
-    headPic<br>
-    <%= f.file_field :avatar %>
-    <%= f.hidden_field :avatar_cache %>
-  </div>
-
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+</div>
 <% end %>

@@ -23,3 +23,18 @@
  .reg_con_layout{
  	margin-left: 35%;
  }
+
+ .text_style{
+  	background: #FFFFFF; 
+  	border: none; 
+  	border-bottom: 1px #EDEDED solid; 
+  	width: 100%;
+  }
+
+ .text_style:focus{ 
+	border-bottom: 1px #BDBDBD solid;
+  }
+
+  .field{
+  	margin-top: 10px;
+  }

@@ -25,13 +25,17 @@
     <%= f.hidden_field :avatar_cache %>
   </div>
 
+<!--
   <div class="field">
-    <%= f.label :dis_flg %><br>
-    <%= f.text_field :dis_flg, class: "datepicker" %>
+    <%#= f.label :dis_flg %><br>
+    <%#= f.text_field :dis_flg, class: "datepicker" %>
   </div>
+-->
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit class: "btn btn-primary" %>
+    &nbsp;&nbsp;
+    <%= link_to 'Back', mainmenus_path, class: "btn btn-default" %>
   </div>
 
 <% end %>

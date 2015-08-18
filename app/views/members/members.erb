@@ -14,7 +14,7 @@
       <th>status</th>
       <th>right</th>
       <th>del_flg</th>
-      <th colspan="3"></th>
+      <th></th>
     </tr>
   </thead>
 
@@ -31,9 +31,16 @@
         <td><%= member.m_right %></td>
         <td><%= member.del_flg %></td>
 
-        <td><%= link_to 'Show', member %></td>
-        <td><%= link_to 'Edit', edit_member_path(member) %></td>
-        <td><%= link_to 'Destroy', member, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td>
+          <div class="btn-group" role="group" aria-label="...">
+            <nobr>
+              <%= link_to 'Show', member, class: "btn btn-default" %>
+              <%= link_to 'Edit', edit_member_path(member) , class: "btn btn-default" %>
+              <%= link_to 'Destroy', member, class: "btn btn-default", method: :delete, data: { confirm: 'Are you sure?' } %>
+            </nobr>
+          </div>
+        </td>
+
       </tr>
     <% end %>
   </tbody>
