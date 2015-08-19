@@ -14,7 +14,7 @@
   
 
   <div class="panel panel-default">
-  <div class="panel-heading">Panel heading without title</div>
+  <div class="panel-heading"><h3>Editing Member</h3></div>
   <div class="panel-body">
     
     <div class="field">
@@ -27,55 +27,55 @@
       <% if @minimum_password_length %>
       <em>(<%= @minimum_password_length %> characters minimum)</em>
       <% end %><br />
-      <%= f.password_field :password, autocomplete: "off" %>
+      <%= f.password_field :password, autocomplete: "off", class: "text_style" %>
     </div>
 
     <div class="field">
       <%= f.label :password_confirmation %><br />
-      <%= f.password_field :password_confirmation, autocomplete: "off" %>
+      <%= f.password_field :password_confirmation, autocomplete: "off", class: "text_style" %>
     </div>
 
 
     <div class="field">
       <%= f.label :name %><br>
-      <%= f.text_field :name %>
+      <%= f.text_field :name, class: "text_style" %>
     </div>
 
     <div class="field">
       <%= f.label :birthday %><br>
-      <%= f.text_field :birthday, class: "datepicker" %>123
+      <%= f.text_field :birthday, class: "datepicker", class: "text_style" %>
     </div>
 
     <div class="field">
       <%= f.label :date_in %><br>
-      <%= f.text_field :date_in %>
+      <%= f.text_field :date_in, class: "text_style" %>
     </div>
 
     <div class="field">
       <%= f.label :graduated_from %><br>
-      <%= f.text_field :graduated_from %>
+      <%= f.text_field :graduated_from, class: "text_style" %>
     </div>
 
     <div class="field">
       <%= f.label :role %><br>
-      <%= f.select :role, MRole.all.collect{ |mr| [mr.role, mr.role_no] }, { include_blank: true }, { class: "form-control" } %>
+      <%= f.select :role, MRole.all.collect{ |mr| [mr.role, mr.role_no] }, { include_blank: true }, { class: "text_style" } %>
       <%#= f.text_field :role %>
     </div>
 
     <div class="field">
       <%= f.label :status %><br>
-      <%= f.text_field :status %>
+      <%= f.text_field :status, class: "text_style" %>
     </div>
 
     <div class="field">
       <%= f.label :del_flg %><br>
-      <%= f.text_field :del_flg %>
+      <%= f.text_field :del_flg, class: "text_style" %>
     </div>
 
     <div class="field">
       headPic<br>
       <%= f.file_field :avatar %>
-      <%= f.hidden_field :avatar_cache %>
+      <%= f.hidden_field :avatar_cache, class: "text_style" %>
     </div>
 
 

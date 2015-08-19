@@ -20,17 +20,10 @@
 
 $(function() {
 
-	
-	$('input[type=text]').attr('class', 'text_style')
-	$('input[type=password]').attr('class', 'text_style')
-	$('input[type=email]').attr('class', 'text_style')
-
 	//datepicker
   	$('.datepicker').datepicker();
-
+  	
   	// for pdf
   	$('.media').media();
-
-
   	
 });

@@ -3,8 +3,8 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 # set class for all text_field
-$(document).on 'ready', ->
-	alert 1
-	$('input[type=text]').attr('class', 'text_style')
-	$('input[type=password]').attr('class', 'text_style')
-	$('input[type=email]').attr('class', 'text_style')
+# $(document).on 'ready', ->
+# 	alert 1
+# 	$('input[type=text]').attr('class', 'text_style')
+# 	$('input[type=password]').attr('class', 'text_style')
+# 	$('input[type=email]').attr('class', 'text_style')
