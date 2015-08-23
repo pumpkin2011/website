@@ -15,23 +15,38 @@
  *= require jquery-ui/datepicker
 
  */
- .con_layout{
+ .con_layout {
  	margin-left: 35%;
  	margin-top: 100px;
  }
 
- .reg_con_layout{
+ .reg_con_layout {
  	margin-left: 35%;
  }
 
- .text_style{
-  	background: #FFFFFF; 
-  	border: none; 
-  	border-bottom: 1px #EDEDED solid; 
-  	width: 100%;
+ .text_style {
+    background: #FFFFFF; 
+    border: none; 
+    border-bottom: 1px #EDEDED solid; 
+    width: 100%;
   }
 
- .text_style:focus{ 
+  .text_area_style {
+    background: #FFFFFF; 
+    border: none; 
+    border-left: 1px #EDEDED solid;
+    border-right: 1px #EDEDED solid; 
+    border-bottom: 1px #EDEDED solid; 
+    width: 100%;
+  }
+
+.text_area_style:focus {
+  border-left: 1px #BDBDBD solid;
+  border-right: 1px #BDBDBD solid;
+  border-bottom: 1px #BDBDBD solid;
+}
+
+ .text_style:focus { 
 	border-bottom: 1px #BDBDBD solid;
   }
 

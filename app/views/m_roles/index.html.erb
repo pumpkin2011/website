@@ -7,7 +7,7 @@
     <tr>
       <th>Role_no</th>
       <th>Role</th>
-      <th colspan="3" style="text-align: center">
+      <th style="text-align: center">
         options
       </th>
     </tr>
@@ -18,9 +18,11 @@
       <tr>
         <td><%= m_role.role_no %></td>
         <td><%= m_role.role %></td>
-        <td><%= link_to 'Show', m_role %></td>
-        <td><%= link_to 'Edit', edit_m_role_path(m_role) %></td>
-        <td><%= link_to 'Destroy', m_role, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td>
+          <%= link_to 'Show', m_role, class: "btn btn-default"  %>
+          <%= link_to 'Edit', edit_m_role_path(m_role), class: "btn btn-default"  %>
+          <%= link_to 'Destroy', m_role, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default"  %>
+        </td>
       </tr>
     <% end %>
   </tbody>

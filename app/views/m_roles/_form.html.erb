@@ -11,15 +11,24 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :role_no %><br>
-    <%= f.text_field :role_no %>
+  <div class="panel panel-default">
+  <div class="panel-heading"><h3>Editing Member</h3></div>
+  <div class="panel-body">
+
+    <div class="field">
+      <%= f.label :role_no %><br>
+      <%= f.text_field :role_no, class: "text_style" %>
+    </div>
+    <div class="field">
+      <%= f.label :role %><br>
+      <%= f.text_field :role, class: "text_style" %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+
   </div>
-  <div class="field">
-    <%= f.label :role %><br>
-    <%= f.text_field :role %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
   </div>
+
 <% end %>
