@@ -12,7 +12,7 @@
   <% end %>
 
   <div class="panel panel-default">
-  <div class="panel-heading"><h3>Editing Member</h3></div>
+  <div class="panel-heading"><h3><%= @m_role.persisted? ? "Editing M_Role" : "New M_Role" %></h3></div>
   <div class="panel-body">
 
     <div class="field">
@@ -23,11 +23,15 @@
       <%= f.label :role %><br>
       <%= f.text_field :role, class: "text_style" %>
     </div>
+
+    <br />
+
     <div class="actions">
-      <%= f.submit %>
+      <%= f.submit class: "btn btn-primary" %>
+      <%#= link_to 'Show', @m_role %> &nbsp;
+      <%= link_to 'Back', m_roles_path, class: "btn btn-default" %>
     </div>
 
-  </div>
   </div>
   </div>
 

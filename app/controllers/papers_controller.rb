@@ -28,12 +28,16 @@ class PapersController < ApplicationController
   # GET /papers/new
   def new
     @paper = Paper.new
+
+    respond_to do |format|
+      format.html { render :layout => "console_desks" }
+    end
   end
 
   # GET /papers/1/edit
   def edit
     respond_to do |format|
-      format.html {render :layout => "console_desks" }
+      format.html { render :layout => "console_desks" }
     end
   end
 

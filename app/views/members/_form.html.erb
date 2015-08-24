@@ -73,17 +73,22 @@
     </div>
 
     <div class="field">
-      headPic<br>
+      <%= image_tag(@member.avatar_url, style: "width: 150px; height: 150px") if @member.avatar? %>
       <%= f.file_field :avatar %>
       <%= f.hidden_field :avatar_cache, class: "text_style" %>
     </div>
 
+    <br />
 
     <div class="actions">
-      <%= f.submit %>
+      <%= f.submit class: "btn btn-primary" %>
+      &nbsp;
+      <%= link_to 'Back', show_all_members_path, class: "btn btn-default" %>
     </div>
 
-  </div>
+    <%#= link_to 'Show', @member %>
+    
+
   </div>
   </div>
 <% end %>

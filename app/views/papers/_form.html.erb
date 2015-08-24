@@ -12,7 +12,7 @@
   <% end %>
 
   <div class="panel panel-default">
-  <div class="panel-heading"><h3>Editing Paper</h3></div>
+  <div class="panel-heading"><h3><%= @paper.persisted? ? "Editing Paper" : "New Paper" %></h3></div>
   <div class="panel-body">
 
     <div class="field">
@@ -37,10 +37,13 @@
     </div>
 
     <div class="actions">
-      <%= f.submit %>
+      <%= f.submit class: "btn btn-primary" %>&nbsp;
+      <%= link_to 'Back', show_all_papers_path, class: "btn btn-default" %>
     </div>
 
-  </div>
+    <%#= link_to 'Show', @paper %> 
+    
+
   </div>
   </div>
 

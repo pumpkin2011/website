@@ -11,7 +11,7 @@
             <div style="margin-left: 8px">
               <p>
                 <%= paper.description %>
-                [<a href="#">read more</a>]
+                [<%= link_to_if paper.avatar?, "read more", paper.avatar_url, target: "_blank" %>]
               </p>
             </div>
         </td>

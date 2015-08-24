@@ -18,7 +18,7 @@
       <tr>
         <td><%= m_role.role_no %></td>
         <td><%= m_role.role %></td>
-        <td>
+        <td align="center">
           <%= link_to 'Show', m_role, class: "btn btn-default"  %>
           <%= link_to 'Edit', edit_m_role_path(m_role), class: "btn btn-default"  %>
           <%= link_to 'Destroy', m_role, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default"  %>
@@ -30,4 +30,4 @@
 
 <br>
 
-<%= link_to 'New a role', new_m_role_path %>
+<%= link_to 'New a role', new_m_role_path, class: "btn btn-primary" %>
